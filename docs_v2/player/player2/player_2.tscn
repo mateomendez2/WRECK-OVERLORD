@@ -1,0 +1,169 @@
+[gd_scene load_steps=20 format=3 uid="uid://cw41xlsptrtj4"]
+
+[ext_resource type="Script" uid="uid://bfoumkqat0fci" path="res://player/player2/player_2.gd" id="1_ogvyo"]
+[ext_resource type="Texture2D" uid="uid://ddexhjoix2iw" path="res://asssets/Autoazul.png" id="2_m43e5"]
+[ext_resource type="Texture2D" uid="uid://dgag754teooix" path="res://asssets/Autorojo.png" id="2_qj6el"]
+[ext_resource type="Texture2D" uid="uid://fecqongsxuru" path="res://asssets/Autolila.png" id="4_bumf7"]
+[ext_resource type="PackedScene" uid="uid://bugoaolbtu7ok" path="res://player/barravida.tscn" id="4_mklqb"]
+[ext_resource type="Texture2D" uid="uid://v583fk7kas8g" path="res://asssets/explosion/Explosion1.png" id="5_bumf7"]
+[ext_resource type="Texture2D" uid="uid://dlntguuw52mme" path="res://asssets/Autonaranja.png" id="5_d7ywv"]
+[ext_resource type="Texture2D" uid="uid://b72mlwslert4m" path="res://asssets/explosion/Explosion2.png" id="6_d7ywv"]
+[ext_resource type="Texture2D" uid="uid://b540ma5rlacun" path="res://asssets/explosion/Explosion3.png" id="7_hbf8q"]
+[ext_resource type="Texture2D" uid="uid://33mdubbkg357" path="res://asssets/explosion/Explosion4.png" id="8_dw1qn"]
+[ext_resource type="Texture2D" uid="uid://b1acxgcwek22x" path="res://asssets/explosion/Explosion5.png" id="9_hftiq"]
+[ext_resource type="Texture2D" uid="uid://b315pa55j5w4h" path="res://asssets/explosion/Explosion6.png" id="10_bujvj"]
+[ext_resource type="Texture2D" uid="uid://dvt28vmxkcd3a" path="res://asssets/explosion/Explosion7.png" id="11_4ugde"]
+[ext_resource type="Texture2D" uid="uid://ciyyumx4tgdg6" path="res://asssets/explosion/Explosion8.png" id="12_1i88j"]
+[ext_resource type="AudioStream" uid="uid://c036yqh7mw2fv" path="res://asssets/sfx/Explosion.mp3" id="13_qbbie"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hbf8q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qj6el")
+}],
+"loop": false,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_m43e5")
+}],
+"loop": false,
+"name": &"2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_bumf7")
+}],
+"loop": false,
+"name": &"3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_d7ywv")
+}],
+"loop": false,
+"name": &"4",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_j36fi"]
+font_size = 65
+font_color = Color(0.94509804, 0.16862746, 0.16862746, 1)
+outline_size = 12
+outline_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_pqtxh"]
+radius = 17.0
+height = 72.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yab2f"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_bumf7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_d7ywv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_hbf8q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_dw1qn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_hftiq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_bujvj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_4ugde")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_1i88j")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"Explosion",
+"speed": 15.0
+}]
+
+[node name="Player2" type="RigidBody2D" groups=["Player", "Player2"]]
+position = Vector2(1700, 540)
+rotation = 3.1415927
+script = ExtResource("1_ogvyo")
+player_id = 2
+
+[node name="Auto_P2" type="AnimatedSprite2D" parent="."]
+rotation = 1.5707964
+scale = Vector2(0.018, 0.018)
+sprite_frames = SubResource("SpriteFrames_hbf8q")
+animation = &"1"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Barravida2" parent="CanvasLayer" instance=ExtResource("4_mklqb")]
+layout_direction = 2
+offset_left = 1171.0
+offset_top = 980.0
+offset_right = 1630.0
+offset_bottom = 999.0
+
+[node name="P2Muertes" type="Label" parent="CanvasLayer"]
+z_index = 1
+offset_left = 761.0
+offset_top = 932.0
+offset_right = 897.0
+offset_bottom = 1048.0
+text = "0"
+label_settings = SubResource("LabelSettings_j36fi")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RespawnTimer2" type="Timer" parent="."]
+wait_time = 3.0
+one_shot = true
+
+[node name="InvincibilityTimer2" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="SpeedTimer2" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[node name="LaserTimer2" type="Timer" parent="."]
+wait_time = 10.0
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+z_index = 1
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_pqtxh")
+
+[node name="Explosion" type="AnimatedSprite2D" parent="."]
+z_index = 5
+z_as_relative = false
+scale = Vector2(0.1, 0.1)
+sprite_frames = SubResource("SpriteFrames_yab2f")
+animation = &"Explosion"
+frame = 8
+frame_progress = 1.0
+
+[node name="Explosion1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("13_qbbie")
+volume_db = -20.0
+
+[connection signal="timeout" from="RespawnTimer2" to="." method="_on_respawn_timer_2_timeout"]
+[connection signal="timeout" from="InvincibilityTimer2" to="." method="_on_invincibility_timer_2_timeout"]
+[connection signal="timeout" from="SpeedTimer2" to="." method="_on_speed_timer_2_timeout"]
+[connection signal="timeout" from="LaserTimer2" to="." method="_on_laser_timer_2_timeout"]

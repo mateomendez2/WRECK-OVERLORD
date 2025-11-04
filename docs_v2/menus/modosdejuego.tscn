@@ -1,0 +1,52 @@
+[gd_scene load_steps=6 format=3 uid="uid://dcvjd8bnse32j"]
+
+[ext_resource type="Script" uid="uid://crefvblxi7njy" path="res://menus/modosdejuego.gd" id="1_twrgl"]
+[ext_resource type="Texture2D" uid="uid://d07tkdknu8qdm" path="res://asssets/Fondointerfazvsycoop.png" id="2_vx642"]
+[ext_resource type="Texture2D" uid="uid://b21ip67d2mlth" path="res://asssets/Logovs.png" id="3_43t30"]
+[ext_resource type="Texture2D" uid="uid://dw7u8lq7l4thj" path="res://asssets/LogoCOP.png" id="4_276jr"]
+[ext_resource type="Texture2D" uid="uid://oidmwc0jisy3" path="res://asssets/Power-Up-Off.svg" id="5_vx642"]
+
+[node name="Modosdejuego" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_twrgl")
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_vx642")
+stretch_mode = 5
+
+[node name="Modo1" type="TextureButton" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 646.0
+offset_top = 422.5
+offset_right = 874.0
+offset_bottom = 657.5
+texture_normal = ExtResource("3_43t30")
+
+[node name="Modo2" type="TextureButton" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 1046.0
+offset_top = 422.5
+offset_right = 1274.0
+offset_bottom = 657.5
+texture_normal = ExtResource("4_276jr")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(761, 542.00006)
+rotation = 0.7853982
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("5_vx642")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1160.0001, 542.00006)
+rotation = 0.7853982
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("5_vx642")

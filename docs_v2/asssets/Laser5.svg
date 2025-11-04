@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="696.23175"
+   height="100"
+   viewBox="0 0 184.21131 26.458332"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="Laser5.svg"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="0.57883025"
+     inkscape:cx="404.2636"
+     inkscape:cy="0.86381111"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-13.223369,-276.02493)">
+    <rect
+       style="fill:#8c3dd8;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="rect1-1-4-9"
+       width="184.13277"
+       height="17.364183"
+       x="13.262637"
+       y="280.57199"
+       rx="92.066383"
+       ry="8.6820917"
+       inkscape:export-filename="Laser5"
+       inkscape:export-xdpi="264.64999"
+       inkscape:export-ydpi="264.64999" />
+    <rect
+       style="fill:#c197eb;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="rect1-1-4-8-1-9"
+       width="184.2113"
+       height="10.965196"
+       x="13.223369"
+       y="283.77148"
+       rx="92.105652"
+       ry="5.4825978" />
+  </g>
+</svg>

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://r3543m33hjlm"]
+
+[ext_resource type="Script" uid="uid://i4pk7cukul6p" path="res://menus/Global.gd" id="1_iy7bp"]
+[ext_resource type="AudioStream" uid="uid://bc4otjd3vt1ml" path="res://asssets/sfx/menuxd.wav" id="2_0vwyf"]
+
+[node name="Global" type="Node2D"]
+script = ExtResource("1_iy7bp")
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_0vwyf")
+volume_db = -10.0

@@ -1,0 +1,89 @@
+[gd_scene load_steps=14 format=3 uid="uid://372dht12vbss"]
+
+[ext_resource type="Script" uid="uid://rgsmmb252iex" path="res://bomba/bomba.gd" id="1_3m2do"]
+[ext_resource type="Texture2D" uid="uid://bb80oaa82rpay" path="res://asssets/Bomba.png" id="1_6k5un"]
+[ext_resource type="Texture2D" uid="uid://v583fk7kas8g" path="res://asssets/explosion/Explosion1.png" id="3_lxlyu"]
+[ext_resource type="Texture2D" uid="uid://b72mlwslert4m" path="res://asssets/explosion/Explosion2.png" id="4_3svsb"]
+[ext_resource type="Texture2D" uid="uid://b540ma5rlacun" path="res://asssets/explosion/Explosion3.png" id="5_bjxep"]
+[ext_resource type="Texture2D" uid="uid://33mdubbkg357" path="res://asssets/explosion/Explosion4.png" id="6_uyj2r"]
+[ext_resource type="Texture2D" uid="uid://b1acxgcwek22x" path="res://asssets/explosion/Explosion5.png" id="7_kiboj"]
+[ext_resource type="Texture2D" uid="uid://b315pa55j5w4h" path="res://asssets/explosion/Explosion6.png" id="8_w1y1v"]
+[ext_resource type="Texture2D" uid="uid://dvt28vmxkcd3a" path="res://asssets/explosion/Explosion7.png" id="9_fhoia"]
+[ext_resource type="Texture2D" uid="uid://ciyyumx4tgdg6" path="res://asssets/explosion/Explosion8.png" id="10_f7o0n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3m2do"]
+radius = 102.0049
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kqs1u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_lxlyu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_3svsb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bjxep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uyj2r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_kiboj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_w1y1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_fhoia")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_f7o0n")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"Explosion",
+"speed": 15.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lxlyu"]
+radius = 15.0
+
+[node name="Bomba" type="Area2D"]
+z_index = 2
+collision_layer = 0
+script = ExtResource("1_3m2do")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = 2
+position = Vector2(5, -7)
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("1_6k5un")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_3m2do")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 5
+scale = Vector2(0.13165486, 0.13165486)
+sprite_frames = SubResource("SpriteFrames_kqs1u")
+animation = &"Explosion"
+frame = 8
+frame_progress = 1.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 2.5
+one_shot = true
+autostart = true
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 255
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("CircleShape2D_lxlyu")
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

@@ -1,0 +1,84 @@
+[gd_scene load_steps=11 format=3 uid="uid://du2rbebt0duhp"]
+
+[ext_resource type="Script" uid="uid://ccsvc27oc4ng0" path="res://player/modos/modo_2.gd" id="1_kmx45"]
+[ext_resource type="PackedScene" uid="uid://c7y27ycf6e8ed" path="res://mapas/mapa_3.tscn" id="4_kmx45"]
+[ext_resource type="PackedScene" uid="uid://cc5eandtbvqgg" path="res://player/player1/player_1.tscn" id="7_fwa5f"]
+[ext_resource type="Script" uid="uid://di20ri3lqt4m8" path="res://player/modos/canvas_layer.gd" id="7_kmx45"]
+[ext_resource type="PackedScene" uid="uid://dskua6u54wxg4" path="res://mapas/mapa_1.tscn" id="8_fwa5f"]
+[ext_resource type="PackedScene" uid="uid://cw41xlsptrtj4" path="res://player/player2/player_2.tscn" id="8_kmx45"]
+[ext_resource type="PackedScene" uid="uid://co2q1ls3bt00k" path="res://mapas/mapa_2.tscn" id="9_kmx45"]
+[ext_resource type="AudioStream" uid="uid://2cggm5ppwrt6" path="res://asssets/sfx/gameplayxd.wav" id="11_pll05"]
+[ext_resource type="AudioStream" uid="uid://c036yqh7mw2fv" path="res://asssets/sfx/Explosion.mp3" id="12_fmyq1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_iwfsl"]
+font_size = 65
+font_color = Color(0.94509804, 0.16862746, 0.16862746, 1)
+outline_size = 12
+outline_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
+
+[node name="Modo2" type="Node2D"]
+script = ExtResource("1_kmx45")
+
+[node name="Mapa1" parent="." instance=ExtResource("8_fwa5f")]
+
+[node name="Mapa2" parent="." instance=ExtResource("9_kmx45")]
+
+[node name="Mapa3" parent="." instance=ExtResource("4_kmx45")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("7_kmx45")
+
+[node name="MatchTimer" type="Timer" parent="CanvasLayer"]
+
+[node name="Tiempo" type="Label" parent="CanvasLayer"]
+z_index = 1
+offset_left = 892.0
+offset_top = 40.0
+offset_right = 1028.0
+offset_bottom = 156.0
+text = "0"
+label_settings = SubResource("LabelSettings_iwfsl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ContadorMuertes" type="Label" parent="CanvasLayer"]
+z_index = 1
+offset_left = 892.0
+offset_top = 880.0
+offset_right = 1028.0
+offset_bottom = 996.0
+text = "0"
+label_settings = SubResource("LabelSettings_iwfsl")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimerBomba" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[node name="TimerPartida" type="Timer" parent="."]
+wait_time = 120.0
+one_shot = true
+autostart = true
+
+[node name="Gameplay1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_pll05")
+volume_db = -10.0
+autoplay = true
+
+[node name="Explosion1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_fmyq1")
+volume_db = -20.0
+
+[node name="TimerSonido" type="Timer" parent="."]
+wait_time = 2.5
+one_shot = true
+
+[node name="Player1" parent="." instance=ExtResource("7_fwa5f")]
+
+[node name="Player2" parent="." instance=ExtResource("8_kmx45")]
+
+[connection signal="timeout" from="CanvasLayer/MatchTimer" to="CanvasLayer" method="_on_match_timer_timeout"]
+[connection signal="timeout" from="TimerBomba" to="." method="_on_timer_bomba_timeout"]
+[connection signal="timeout" from="TimerPartida" to="." method="_on_timer_partida_timeout"]
+[connection signal="timeout" from="TimerSonido" to="." method="_on_timer_sonido_timeout"]

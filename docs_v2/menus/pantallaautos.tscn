@@ -1,0 +1,218 @@
+[gd_scene load_steps=16 format=3 uid="uid://bceatsnnukhw2"]
+
+[ext_resource type="Script" uid="uid://b5nvxu61tp1nn" path="res://menus/pantallaautos.gd" id="1_da7ph"]
+[ext_resource type="Texture2D" uid="uid://bbg0c3s8ufvl6" path="res://asssets/Fondointerfaz.png" id="2_wijku"]
+[ext_resource type="Texture2D" uid="uid://dgag754teooix" path="res://asssets/Autorojo.png" id="3_27uk5"]
+[ext_resource type="Texture2D" uid="uid://ddexhjoix2iw" path="res://asssets/Autoazul.png" id="4_tswke"]
+[ext_resource type="Texture2D" uid="uid://fecqongsxuru" path="res://asssets/Autolila.png" id="5_d4ton"]
+[ext_resource type="Texture2D" uid="uid://dlntguuw52mme" path="res://asssets/Autonaranja.png" id="6_p80uw"]
+[ext_resource type="Texture2D" uid="uid://bf86qiar78av" path="res://asssets/botontilde2.png" id="7_eidfh"]
+[ext_resource type="Texture2D" uid="uid://c1jquvpsdyx3v" path="res://asssets/botontilde.png" id="7_vqeta"]
+[ext_resource type="Texture2D" uid="uid://oidmwc0jisy3" path="res://asssets/Power-Up-Off.svg" id="9_55eow"]
+[ext_resource type="AudioStream" uid="uid://bapgev6566xfh" path="res://asssets/sfx/car_pick.mp3" id="10_2kw3e"]
+[ext_resource type="AudioStream" uid="uid://dalsaxsqotnqh" path="res://asssets/sfx/wrong.mp3" id="11_u4vwu"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_da7ph"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_27uk5")
+}],
+"loop": false,
+"name": &"Auto1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_tswke")
+}],
+"loop": false,
+"name": &"Auto2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_d4ton")
+}],
+"loop": false,
+"name": &"Auto3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_p80uw")
+}],
+"loop": false,
+"name": &"Auto4",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_55eow"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_eidfh")
+}],
+"loop": false,
+"name": &"OFF",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_vqeta")
+}],
+"loop": false,
+"name": &"ON",
+"speed": 5.0
+}]
+
+[sub_resource type="FontVariation" id="FontVariation_55eow"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_v5fkn"]
+font = SubResource("FontVariation_55eow")
+font_size = 150
+font_color = Color(0.94509804, 0.16862746, 0.16862746, 1)
+outline_size = 15
+outline_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
+
+[node name="Pantallaautos" type="Control"]
+layout_direction = 2
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_da7ph")
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_wijku")
+stretch_mode = 5
+
+[node name="Autorojo1" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(130, 176)
+rotation = 1.5707964
+scale = Vector2(0.028, 0.028)
+texture = ExtResource("3_27uk5")
+
+[node name="Autoazul1" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(300, 176)
+rotation = 1.5707964
+scale = Vector2(0.028, 0.028)
+texture = ExtResource("4_tswke")
+
+[node name="Autolila1" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(470, 176)
+rotation = 1.5707964
+scale = Vector2(0.028, 0.028)
+texture = ExtResource("5_d4ton")
+
+[node name="Autonaranja1" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(640, 176)
+rotation = 1.5707964
+scale = Vector2(0.028, 0.028)
+texture = ExtResource("6_p80uw")
+
+[node name="Autorojo2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(1790, 176)
+rotation = -1.5707964
+scale = Vector2(0.028, 0.028)
+texture = ExtResource("3_27uk5")
+
+[node name="Autoazul2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(1620, 176)
+rotation = -1.5707964
+scale = Vector2(0.028, 0.028)
+texture = ExtResource("4_tswke")
+
+[node name="Autolila2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(1450, 176)
+rotation = -1.5707964
+scale = Vector2(0.028, 0.028)
+texture = ExtResource("5_d4ton")
+
+[node name="Autonaranja2" type="Sprite2D" parent="."]
+z_index = 1
+position = Vector2(1280, 176)
+rotation = -1.5707964
+scale = Vector2(0.028, 0.028)
+texture = ExtResource("6_p80uw")
+
+[node name="Auto_P1" type="AnimatedSprite2D" parent="."]
+position = Vector2(460, 574)
+rotation = 1.5707964
+scale = Vector2(0.14166667, 0.14166665)
+sprite_frames = SubResource("SpriteFrames_da7ph")
+animation = &"Auto1"
+autoplay = "Auto1"
+
+[node name="Auto_P2" type="AnimatedSprite2D" parent="."]
+position = Vector2(1460, 574)
+rotation = 4.712389
+scale = Vector2(0.14166667, 0.14166665)
+sprite_frames = SubResource("SpriteFrames_da7ph")
+animation = &"Auto2"
+autoplay = "Auto2"
+
+[node name="Botontilde1" type="AnimatedSprite2D" parent="."]
+position = Vector2(790, 906)
+scale = Vector2(0.09341827, 0.09341828)
+sprite_frames = SubResource("SpriteFrames_55eow")
+animation = &"OFF"
+autoplay = "OFF"
+
+[node name="Botontilde2" type="AnimatedSprite2D" parent="."]
+position = Vector2(1130, 906)
+scale = Vector2(0.09341827, 0.09341828)
+sprite_frames = SubResource("SpriteFrames_55eow")
+animation = &"OFF"
+autoplay = "OFF"
+
+[node name="Selection1" type="Sprite2D" parent="."]
+position = Vector2(130, 176)
+rotation = 0.7853982
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_55eow")
+
+[node name="Selection2" type="Sprite2D" parent="."]
+position = Vector2(1620, 176)
+rotation = 0.7853982
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("9_55eow")
+
+[node name="Ready" type="Timer" parent="."]
+wait_time = 3.9
+one_shot = true
+
+[node name="TiempoLabel" type="Label" parent="."]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = 892.0
+offset_top = 438.0
+offset_right = 1028.0
+offset_bottom = 643.0
+text = "0"
+label_settings = SubResource("LabelSettings_v5fkn")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CarPick" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_2kw3e")
+volume_db = -12.0
+
+[node name="Wrong" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_u4vwu")
+volume_db = -10.0
+
+[connection signal="timeout" from="Ready" to="." method="_on_ready_timeout"]

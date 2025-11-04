@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3fang1cla1ii"]
+
+[ext_resource type="Texture2D" uid="uid://dsdv6k6uml7dy" path="res://asssets/Ruedas.png" id="1_b4bir"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_c411k"]
+radius = 95.0
+height = 380.0
+
+[node name="Ruedas" type="StaticBody2D"]
+z_index = -1
+scale = Vector2(0.015, 0.015)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-5, -3)
+texture = ExtResource("1_b4bir")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_c411k")

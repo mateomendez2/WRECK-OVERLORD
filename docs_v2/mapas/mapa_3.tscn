@@ -1,0 +1,227 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7y27ycf6e8ed"]
+
+[ext_resource type="Texture2D" uid="uid://cqf7wnpgl52v6" path="res://asssets/Pista3.png" id="1_6mttl"]
+[ext_resource type="PackedScene" uid="uid://c42b21j3cwc7d" path="res://obstaculos/barrera/barrera.tscn" id="2_4cwq5"]
+[ext_resource type="PackedScene" uid="uid://m4u301lhobs3" path="res://power-ups/power_up.tscn" id="2_g2pbu"]
+[ext_resource type="PackedScene" uid="uid://c3fang1cla1ii" path="res://obstaculos/ruedas/ruedas.tscn" id="3_4cwq5"]
+
+[node name="Mapa3" type="Node2D"]
+
+[node name="Backgound" type="Sprite2D" parent="."]
+z_index = -4096
+texture = ExtResource("1_6mttl")
+centered = false
+
+[node name="MapColisions" type="StaticBody2D" parent="."]
+
+[node name="MapBorder" type="CollisionPolygon2D" parent="MapColisions"]
+polygon = PackedVector2Array(1, 2, 1921, 1, 1921, 1080, -6, 1080, -2, 118, 48, 99, 47, 922, 47, 978, 53, 1005, 71, 1029, 112, 1042, 1540, 1042, 1737, 1042, 1797, 1042, 1829, 1037, 1852, 1028, 1867, 1012, 1876, 967, 1876, 152, 1873, 100, 1861, 63, 1840, 48, 1809, 41, 113, 41, 79, 51, 58, 74, 50, 91, 42, 113, -3, 118)
+
+[node name="ConjuntoBarreras" type="Node2D" parent="MapColisions"]
+
+[node name="Barrera" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(249, 44)
+
+[node name="Barrera2" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(249, 121)
+
+[node name="Barrera3" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(249, 197)
+
+[node name="Barrera4" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(249, 273)
+
+[node name="Barrera5" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(249, 349)
+
+[node name="Barrera6" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(249, 426)
+
+[node name="Barrera7" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(249, 502)
+
+[node name="Barrera8" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(249, 578)
+
+[node name="Barrera9" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(249, 655)
+
+[node name="Barrera10" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(249, 732)
+
+[node name="Barrera11" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(249, 808)
+
+[node name="Barrera12" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(249, 886)
+
+[node name="Barrera13" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(249, 964)
+
+[node name="Barrera14" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(1671, 118)
+rotation = 3.1415927
+
+[node name="Barrera15" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(1671, 195)
+rotation = 3.1415927
+
+[node name="Barrera16" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(1671, 271)
+rotation = 3.1415927
+
+[node name="Barrera17" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(1671, 347)
+rotation = 3.1415927
+
+[node name="Barrera18" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(1671, 423)
+rotation = 3.1415927
+
+[node name="Barrera19" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(1671, 500)
+rotation = 3.1415927
+
+[node name="Barrera20" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(1671, 576)
+rotation = 3.1415927
+
+[node name="Barrera21" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(1671, 652)
+rotation = 3.1415927
+
+[node name="Barrera22" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(1671, 729)
+rotation = 3.1415927
+
+[node name="Barrera23" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(1671, 806)
+rotation = 3.1415927
+
+[node name="Barrera24" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(1671, 882)
+rotation = 3.1415927
+
+[node name="Barrera25" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(1671, 960)
+rotation = 3.1415927
+
+[node name="Barrera26" parent="MapColisions/ConjuntoBarreras" instance=ExtResource("2_4cwq5")]
+position = Vector2(1671, 1038)
+rotation = 3.1415927
+
+[node name="ConjuntoRuedas" type="Node2D" parent="MapColisions"]
+
+[node name="Ruedas" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(599, 815)
+rotation = 0.1308997
+scale = Vector2(0.15, 0.15)
+
+[node name="Ruedas2" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(599, 756)
+rotation = -0.2617994
+scale = Vector2(0.15, 0.15)
+
+[node name="Ruedas3" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(599, 696)
+scale = Vector2(0.15, 0.15)
+
+[node name="Ruedas4" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(599, 380)
+rotation = 0.1308997
+scale = Vector2(0.15, 0.15)
+
+[node name="Ruedas5" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(599, 321)
+scale = Vector2(0.15, 0.15)
+
+[node name="Ruedas6" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(599, 261)
+rotation = -0.2617994
+scale = Vector2(0.15, 0.15)
+
+[node name="Ruedas7" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(1324, 815)
+rotation = -0.1308997
+scale = Vector2(0.15, 0.15)
+
+[node name="Ruedas8" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(1324, 756)
+rotation = 0.3926991
+scale = Vector2(0.15, 0.15)
+
+[node name="Ruedas9" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(1324, 696)
+rotation = -0.2617994
+scale = Vector2(0.15, 0.15)
+
+[node name="Ruedas10" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(1324, 380)
+rotation = -0.3926991
+scale = Vector2(0.15, 0.15)
+
+[node name="Ruedas11" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(1324, 321)
+rotation = 0.1308997
+scale = Vector2(0.15, 0.15)
+
+[node name="Ruedas12" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(1324, 261)
+rotation = 0.2617994
+scale = Vector2(0.15, 0.15)
+
+[node name="Ruedas13" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(959, 654)
+rotation = 0.2617994
+scale = Vector2(0.15, 0.15)
+
+[node name="Ruedas14" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(959, 595)
+scale = Vector2(0.15, 0.15)
+
+[node name="Ruedas15" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(959, 535)
+rotation = -0.1308997
+scale = Vector2(0.15, 0.15)
+
+[node name="Ruedas16" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(959, 475)
+rotation = 0.2617994
+scale = Vector2(0.15, 0.15)
+
+[node name="Ruedas17" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(959, 415)
+rotation = -0.1308997
+scale = Vector2(0.15, 0.15)
+
+[node name="Ruedas18" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(959, 1011)
+rotation = 0.1308997
+scale = Vector2(0.15, 0.15)
+
+[node name="Ruedas19" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(959, 952)
+rotation = -0.2617994
+scale = Vector2(0.15, 0.15)
+
+[node name="Ruedas20" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(959, 127)
+rotation = -0.2617994
+scale = Vector2(0.15, 0.15)
+
+[node name="Ruedas21" parent="MapColisions/ConjuntoRuedas" instance=ExtResource("3_4cwq5")]
+position = Vector2(959, 68)
+rotation = -0.1308997
+scale = Vector2(0.15, 0.15)
+
+[node name="Power-Up" parent="." instance=ExtResource("2_g2pbu")]
+position = Vector2(399, 358)
+
+[node name="Power-Up2" parent="." instance=ExtResource("2_g2pbu")]
+position = Vector2(398, 728)
+
+[node name="Power-Up3" parent="." instance=ExtResource("2_g2pbu")]
+position = Vector2(1525, 358)
+
+[node name="Power-Up4" parent="." instance=ExtResource("2_g2pbu")]
+position = Vector2(1525, 728)

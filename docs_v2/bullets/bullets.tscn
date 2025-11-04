@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://iwkgej8f0prb"]
+
+[ext_resource type="Script" uid="uid://bnjss0sgx0ssa" path="res://bullets/bullets.gd" id="1_daqjf"]
+[ext_resource type="Texture2D" uid="uid://biqluta1toufy" path="res://asssets/bullet.png" id="2_daqjf"]
+[ext_resource type="Texture2D" uid="uid://bjwe43fnc4irb" path="res://asssets/choque/choquenada1.png" id="3_23qht"]
+[ext_resource type="Texture2D" uid="uid://di1tkeeehhjm" path="res://asssets/choque/Choquenada2.png" id="4_knwxo"]
+[ext_resource type="Texture2D" uid="uid://c8gqh8388xdi0" path="res://asssets/choque/Choquenada3.png" id="5_6ge25"]
+[ext_resource type="Texture2D" uid="uid://b6brd4533tnv8" path="res://asssets/choque/Choquenada4.png" id="6_m3qcs"]
+[ext_resource type="AudioStream" uid="uid://bi7a0f4xlb5m1" path="res://asssets/sfx/disparo1.wav" id="7_knwxo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qumpn"]
+radius = 3.0
+height = 24.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yn52q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_23qht")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_knwxo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_6ge25")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_m3qcs")
+}, {
+"duration": 1.0,
+"texture": null
+}],
+"loop": false,
+"name": &"Choque",
+"speed": 17.0
+}]
+
+[node name="Bullet" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_daqjf")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+rotation = 1.5707964
+scale = Vector2(0.033704404, 0.046418842)
+texture = ExtResource("2_daqjf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_qumpn")
+
+[node name="Choque" type="AnimatedSprite2D" parent="."]
+z_index = 5
+scale = Vector2(0.019908607, 0.019908603)
+sprite_frames = SubResource("SpriteFrames_yn52q")
+animation = &"Choque"
+frame = 4
+frame_progress = 1.0
+
+[node name="Bala1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_knwxo")
+volume_db = -20.0
+autoplay = true
+
+[connection signal="animation_finished" from="Choque" to="." method="_on_choque_animation_finished"]

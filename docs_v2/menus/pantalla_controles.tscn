@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://jxfe4fks74at"]
+
+[ext_resource type="Script" uid="uid://b30ahhlrerkk4" path="res://menus/pantallacontroles.gd" id="1_qjpeq"]
+[ext_resource type="Texture2D" uid="uid://dt47i0guqmt7m" path="res://asssets/Pantallacontrolesmando.png" id="2_qjpeq"]
+[ext_resource type="Texture2D" uid="uid://b4wre1bh3cp4l" path="res://asssets/Botondeplay.png" id="3_42q82"]
+
+[node name="PantallaControles" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_qjpeq")
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_qjpeq")
+stretch_mode = 5
+
+[node name="Botonplay" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 769.0
+offset_top = 681.0
+offset_right = 2689.0
+offset_bottom = 2601.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("3_42q82")

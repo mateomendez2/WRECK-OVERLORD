@@ -1,0 +1,45 @@
+[gd_scene load_steps=7 format=3 uid="uid://m4u301lhobs3"]
+
+[ext_resource type="Script" uid="uid://6sqiub383jgn" path="res://power-ups/power_up.gd" id="1_lqchq"]
+[ext_resource type="Texture2D" uid="uid://bcynvu3ny0b6q" path="res://asssets/Power-Up-Speed.svg" id="1_va610"]
+[ext_resource type="Texture2D" uid="uid://oidmwc0jisy3" path="res://asssets/Power-Up-Off.svg" id="2_lqchq"]
+[ext_resource type="Texture2D" uid="uid://dxw251tsuhris" path="res://asssets/Power-Up-Laser.svg" id="4_rlwfp"]
+[ext_resource type="Texture2D" uid="uid://bld43ecs0ny88" path="res://asssets/Power-Up-Cura.svg" id="5_i5ptg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8hxo5"]
+radius = 24.0
+
+[node name="Power-Up" type="Area2D"]
+z_index = -1
+collision_layer = 0
+script = ExtResource("1_lqchq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_8hxo5")
+
+[node name="PowerUpSpeed" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("1_va610")
+
+[node name="PowerUpOff" type="Sprite2D" parent="."]
+position = Vector2(1.5258789e-05, -5.9604645e-08)
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("2_lqchq")
+
+[node name="PowerUpLaser" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.03, 0.03)
+texture = ExtResource("4_rlwfp")
+
+[node name="PowerUpHeal" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.024, 0.024)
+texture = ExtResource("5_i5ptg")
+
+[node name="PowerUpRespawnTimer" type="Timer" parent="."]
+wait_time = 15.0
+one_shot = true
+autostart = true
+
+[connection signal="timeout" from="PowerUpRespawnTimer" to="." method="_on_power_up_respawn_timer_timeout"]

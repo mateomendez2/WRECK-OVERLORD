@@ -1,0 +1,74 @@
+[gd_scene load_steps=10 format=3 uid="uid://bcc54qn0424ct"]
+
+[ext_resource type="Script" uid="uid://ca7a1uidvvkak" path="res://laser/laser.gd" id="1_dbcog"]
+[ext_resource type="Texture2D" uid="uid://diy3cuw4q1hyw" path="res://asssets/Laser1.svg" id="2_t17o5"]
+[ext_resource type="Texture2D" uid="uid://cw2k0bhyh8m51" path="res://asssets/Laser2.svg" id="3_n6oit"]
+[ext_resource type="Texture2D" uid="uid://cbfa1sb2swkxi" path="res://asssets/Laser3.svg" id="4_mi7f7"]
+[ext_resource type="Texture2D" uid="uid://bp6krrduvbndh" path="res://asssets/Laser4.svg" id="5_1x7wp"]
+[ext_resource type="Texture2D" uid="uid://b3tru8lyq6mdw" path="res://asssets/Laser5.svg" id="6_3d53e"]
+[ext_resource type="AudioStream" uid="uid://bove7wkhcv4ef" path="res://asssets/sfx/laser1.wav" id="7_t17o5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_wyhtk"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_t17o5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n6oit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mi7f7")
+}, {
+"duration": 1.5,
+"texture": ExtResource("5_1x7wp")
+}, {
+"duration": 4.0,
+"texture": ExtResource("6_3d53e")
+}, {
+"duration": 1.5,
+"texture": ExtResource("5_1x7wp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_mi7f7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_n6oit")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_t17o5")
+}],
+"loop": false,
+"name": &"Laser",
+"speed": 20.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7e0re"]
+size = Vector2(1920, 6)
+
+[node name="Laser" type="Area2D"]
+z_index = 2
+position = Vector2(960, 0)
+collision_layer = 0
+script = ExtResource("1_dbcog")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+z_index = 2
+position = Vector2(-960, -9)
+scale = Vector2(0.13784191, 0.009)
+sprite_frames = SubResource("SpriteFrames_wyhtk")
+animation = &"Laser"
+autoplay = "Laser"
+frame = 8
+frame_progress = 1.0
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_7e0re")
+
+[node name="Laser1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_t17o5")
+volume_db = -15.0
+autoplay = true
+
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]

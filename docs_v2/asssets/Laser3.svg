@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="697.23987"
+   height="100"
+   viewBox="0 0 184.47805 26.458332"
+   version="1.1"
+   id="svg1"
+   sodipodi:docname="Laser3.svg"
+   inkscape:export-filename="Laser3.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     showguides="true"
+     inkscape:zoom="0.40870302"
+     inkscape:cx="375.57834"
+     inkscape:cy="-81.966607"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-13.089996,-209.99049)">
+    <rect
+       style="fill:#8c3dd8;fill-opacity:1;stroke:none;stroke-width:0;stroke-dasharray:none;paint-order:markers fill stroke"
+       id="rect1-1-3"
+       width="184.20723"
+       height="15.62988"
+       x="13.225407"
+       y="215.40472"
+       rx="92.103615"
+       ry="7.81494"
+       inkscape:export-filename="Laser3"
+       inkscape:export-xdpi="264.64999"
+       inkscape:export-ydpi="264.64999" />
+    <rect
+       style="fill:#c197eb;fill-opacity:1;stroke:#2e2e2e;stroke-width:0.205217;paint-order:markers fill stroke"
+       id="rect1-1-4-8-4"
+       width="184.27283"
+       height="6.8953848"
+       x="13.192604"
+       y="219.77196"
+       rx="92.136414"
+       ry="3.4476924" />
+  </g>
+</svg>

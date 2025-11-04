@@ -1,0 +1,75 @@
+[gd_scene load_steps=11 format=3 uid="uid://x072djicatfr"]
+
+[ext_resource type="Script" uid="uid://clve8etau2kxe" path="res://player/modos/modo_1.gd" id="1_ruiiy"]
+[ext_resource type="PackedScene" uid="uid://c7y27ycf6e8ed" path="res://mapas/mapa_3.tscn" id="4_a0hk7"]
+[ext_resource type="PackedScene" uid="uid://cc5eandtbvqgg" path="res://player/player1/player_1.tscn" id="6_ruiiy"]
+[ext_resource type="PackedScene" uid="uid://cw41xlsptrtj4" path="res://player/player2/player_2.tscn" id="7_a0hk7"]
+[ext_resource type="Script" uid="uid://di20ri3lqt4m8" path="res://player/modos/canvas_layer.gd" id="7_t7vul"]
+[ext_resource type="PackedScene" uid="uid://co2q1ls3bt00k" path="res://mapas/mapa_2.tscn" id="8_6ys0e"]
+[ext_resource type="PackedScene" uid="uid://dskua6u54wxg4" path="res://mapas/mapa_1.tscn" id="9_ny3ve"]
+[ext_resource type="AudioStream" uid="uid://2cggm5ppwrt6" path="res://asssets/sfx/gameplayxd.wav" id="18_lmvnw"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_x6rmj"]
+font_size = 65
+font_color = Color(0.94509804, 0.16862746, 0.16862746, 1)
+outline_size = 12
+outline_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_y6l14"]
+font_size = 65
+font_color = Color(0.94509804, 0.16862746, 0.16862746, 1)
+outline_size = 12
+outline_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
+
+[node name="Modo1" type="Node2D"]
+script = ExtResource("1_ruiiy")
+
+[node name="Mapa1" parent="." instance=ExtResource("9_ny3ve")]
+
+[node name="Mapa2" parent="." instance=ExtResource("8_6ys0e")]
+
+[node name="Mapa3" parent="." instance=ExtResource("4_a0hk7")]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+script = ExtResource("7_t7vul")
+
+[node name="MatchTimer" type="Timer" parent="CanvasLayer"]
+
+[node name="Tiempo" type="Label" parent="CanvasLayer"]
+z_index = 1
+offset_left = 892.0
+offset_top = 40.0
+offset_right = 1028.0
+offset_bottom = 156.0
+text = "0"
+label_settings = SubResource("LabelSettings_x6rmj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ContadorMuertes" type="Label" parent="CanvasLayer"]
+z_index = 1
+offset_left = 892.0
+offset_top = 880.0
+offset_right = 1028.0
+offset_bottom = 996.0
+text = "0"
+label_settings = SubResource("LabelSettings_y6l14")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TimerPartida" type="Timer" parent="."]
+wait_time = 120.0
+one_shot = true
+autostart = true
+
+[node name="Gameplay1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("18_lmvnw")
+volume_db = -10.0
+autoplay = true
+
+[node name="Player1" parent="." instance=ExtResource("6_ruiiy")]
+
+[node name="Player2" parent="." instance=ExtResource("7_a0hk7")]
+
+[connection signal="timeout" from="CanvasLayer/MatchTimer" to="CanvasLayer" method="_on_match_timer_timeout"]
+[connection signal="timeout" from="TimerPartida" to="." method="_on_timer_partida_timeout"]

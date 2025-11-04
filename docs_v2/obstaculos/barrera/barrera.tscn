@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://c42b21j3cwc7d"]
+
+[ext_resource type="Texture2D" uid="uid://cdcplckhr8yxv" path="res://asssets/Obstaculobarrera.png" id="1_cnnee"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fnsmb"]
+size = Vector2(15, 73)
+
+[node name="Barrera" type="StaticBody2D"]
+z_index = -1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.01, 0.01)
+texture = ExtResource("1_cnnee")
+centered = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(7.5, 36.5)
+shape = SubResource("RectangleShape2D_fnsmb")
