@@ -43,5 +43,6 @@ Dualsense:
   * Ir hacia la derecha: Mover la palanza hacia la derecha
 
 Creadores:
-|[<img src="https://avatars.githubusercontent.com/u/206244969?v=4" width=115><br><sub>Mateo Tessio</sub>](https://github.com/MateoTessio)|[<img src="https://avatars.githubusercontent.com/u/204621714?v=4" width=115><br><sub>Mateo Mendez</sub>](https://github.com/mateomendez2)||[<img src="https://avatars.githubusercontent.com/u/167729764?v=4" width=115><br><sub>Facundo Protti</sub>](https://github.com/FacundoProtti)|
+Creadores:
+|[<img src="https://avatars.githubusercontent.com/u/206244969?v=4" width=115><br><sub>Mateo Tessio</sub>](https://github.com/MateoTessio)|[<img src="https://avatars.githubusercontent.com/u/204621714?v=4" width=115><br><sub>Mateo Mendez</sub>](https://github.com/mateomendez2)|[<img src="https://avatars.githubusercontent.com/u/167729764?v=4" width=115><br><sub>Facundo Protti</sub>](https://github.com/FacundoProtti)|
 | :---: | :---: | :---: |
