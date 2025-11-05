@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cncp22i0rj4oo"]
+[gd_scene load_steps=12 format=3 uid="uid://cncp22i0rj4oo"]
 
 [ext_resource type="Script" uid="uid://mqfaaqlweo5r" path="res://menus/pantalla_fin_de_juego.gd" id="1_6li7e"]
 [ext_resource type="Texture2D" uid="uid://bbg0c3s8ufvl6" path="res://asssets/Fondointerfaz.png" id="2_6li7e"]
@@ -10,354 +10,8 @@
 [ext_resource type="Texture2D" uid="uid://fecqongsxuru" path="res://asssets/Autolila.png" id="8_21vx1"]
 [ext_resource type="Texture2D" uid="uid://dlntguuw52mme" path="res://asssets/Autonaranja.png" id="9_0xha3"]
 
-[sub_resource type="FontFile" id="FontFile_6li7e"]
-cache/0/65/0/ascent = 0.0
-cache/0/65/0/descent = 0.0
-cache/0/65/0/underline_position = 0.0
-cache/0/65/0/underline_thickness = 0.0
-cache/0/65/0/scale = 1.0
-cache/0/16/0/ascent = 0.0
-cache/0/16/0/descent = 0.0
-cache/0/16/0/underline_position = 0.0
-cache/0/16/0/underline_thickness = 0.0
-cache/0/16/0/scale = 1.0
-cache/0/66/0/ascent = 0.0
-cache/0/66/0/descent = 0.0
-cache/0/66/0/underline_position = 0.0
-cache/0/66/0/underline_thickness = 0.0
-cache/0/66/0/scale = 1.0
-cache/0/67/0/ascent = 0.0
-cache/0/67/0/descent = 0.0
-cache/0/67/0/underline_position = 0.0
-cache/0/67/0/underline_thickness = 0.0
-cache/0/67/0/scale = 1.0
-cache/0/68/0/ascent = 0.0
-cache/0/68/0/descent = 0.0
-cache/0/68/0/underline_position = 0.0
-cache/0/68/0/underline_thickness = 0.0
-cache/0/68/0/scale = 1.0
-cache/0/69/0/ascent = 0.0
-cache/0/69/0/descent = 0.0
-cache/0/69/0/underline_position = 0.0
-cache/0/69/0/underline_thickness = 0.0
-cache/0/69/0/scale = 1.0
-cache/0/70/0/ascent = 0.0
-cache/0/70/0/descent = 0.0
-cache/0/70/0/underline_position = 0.0
-cache/0/70/0/underline_thickness = 0.0
-cache/0/70/0/scale = 1.0
-cache/0/71/0/ascent = 0.0
-cache/0/71/0/descent = 0.0
-cache/0/71/0/underline_position = 0.0
-cache/0/71/0/underline_thickness = 0.0
-cache/0/71/0/scale = 1.0
-cache/0/72/0/ascent = 0.0
-cache/0/72/0/descent = 0.0
-cache/0/72/0/underline_position = 0.0
-cache/0/72/0/underline_thickness = 0.0
-cache/0/72/0/scale = 1.0
-cache/0/73/0/ascent = 0.0
-cache/0/73/0/descent = 0.0
-cache/0/73/0/underline_position = 0.0
-cache/0/73/0/underline_thickness = 0.0
-cache/0/73/0/scale = 1.0
-cache/0/74/0/ascent = 0.0
-cache/0/74/0/descent = 0.0
-cache/0/74/0/underline_position = 0.0
-cache/0/74/0/underline_thickness = 0.0
-cache/0/74/0/scale = 1.0
-cache/0/75/0/ascent = 0.0
-cache/0/75/0/descent = 0.0
-cache/0/75/0/underline_position = 0.0
-cache/0/75/0/underline_thickness = 0.0
-cache/0/75/0/scale = 1.0
-cache/0/76/0/ascent = 0.0
-cache/0/76/0/descent = 0.0
-cache/0/76/0/underline_position = 0.0
-cache/0/76/0/underline_thickness = 0.0
-cache/0/76/0/scale = 1.0
-cache/0/77/0/ascent = 0.0
-cache/0/77/0/descent = 0.0
-cache/0/77/0/underline_position = 0.0
-cache/0/77/0/underline_thickness = 0.0
-cache/0/77/0/scale = 1.0
-cache/0/78/0/ascent = 0.0
-cache/0/78/0/descent = 0.0
-cache/0/78/0/underline_position = 0.0
-cache/0/78/0/underline_thickness = 0.0
-cache/0/78/0/scale = 1.0
-cache/0/79/0/ascent = 0.0
-cache/0/79/0/descent = 0.0
-cache/0/79/0/underline_position = 0.0
-cache/0/79/0/underline_thickness = 0.0
-cache/0/79/0/scale = 1.0
-cache/0/80/0/ascent = 0.0
-cache/0/80/0/descent = 0.0
-cache/0/80/0/underline_position = 0.0
-cache/0/80/0/underline_thickness = 0.0
-cache/0/80/0/scale = 1.0
-cache/0/81/0/ascent = 0.0
-cache/0/81/0/descent = 0.0
-cache/0/81/0/underline_position = 0.0
-cache/0/81/0/underline_thickness = 0.0
-cache/0/81/0/scale = 1.0
-cache/0/82/0/ascent = 0.0
-cache/0/82/0/descent = 0.0
-cache/0/82/0/underline_position = 0.0
-cache/0/82/0/underline_thickness = 0.0
-cache/0/82/0/scale = 1.0
-cache/0/83/0/ascent = 0.0
-cache/0/83/0/descent = 0.0
-cache/0/83/0/underline_position = 0.0
-cache/0/83/0/underline_thickness = 0.0
-cache/0/83/0/scale = 1.0
-cache/0/84/0/ascent = 0.0
-cache/0/84/0/descent = 0.0
-cache/0/84/0/underline_position = 0.0
-cache/0/84/0/underline_thickness = 0.0
-cache/0/84/0/scale = 1.0
-cache/0/85/0/ascent = 0.0
-cache/0/85/0/descent = 0.0
-cache/0/85/0/underline_position = 0.0
-cache/0/85/0/underline_thickness = 0.0
-cache/0/85/0/scale = 1.0
-cache/0/86/0/ascent = 0.0
-cache/0/86/0/descent = 0.0
-cache/0/86/0/underline_position = 0.0
-cache/0/86/0/underline_thickness = 0.0
-cache/0/86/0/scale = 1.0
-cache/0/87/0/ascent = 0.0
-cache/0/87/0/descent = 0.0
-cache/0/87/0/underline_position = 0.0
-cache/0/87/0/underline_thickness = 0.0
-cache/0/87/0/scale = 1.0
-cache/0/88/0/ascent = 0.0
-cache/0/88/0/descent = 0.0
-cache/0/88/0/underline_position = 0.0
-cache/0/88/0/underline_thickness = 0.0
-cache/0/88/0/scale = 1.0
-cache/0/89/0/ascent = 0.0
-cache/0/89/0/descent = 0.0
-cache/0/89/0/underline_position = 0.0
-cache/0/89/0/underline_thickness = 0.0
-cache/0/89/0/scale = 1.0
-cache/0/90/0/ascent = 0.0
-cache/0/90/0/descent = 0.0
-cache/0/90/0/underline_position = 0.0
-cache/0/90/0/underline_thickness = 0.0
-cache/0/90/0/scale = 1.0
-cache/0/91/0/ascent = 0.0
-cache/0/91/0/descent = 0.0
-cache/0/91/0/underline_position = 0.0
-cache/0/91/0/underline_thickness = 0.0
-cache/0/91/0/scale = 1.0
-cache/0/92/0/ascent = 0.0
-cache/0/92/0/descent = 0.0
-cache/0/92/0/underline_position = 0.0
-cache/0/92/0/underline_thickness = 0.0
-cache/0/92/0/scale = 1.0
-cache/0/93/0/ascent = 0.0
-cache/0/93/0/descent = 0.0
-cache/0/93/0/underline_position = 0.0
-cache/0/93/0/underline_thickness = 0.0
-cache/0/93/0/scale = 1.0
-cache/0/94/0/ascent = 0.0
-cache/0/94/0/descent = 0.0
-cache/0/94/0/underline_position = 0.0
-cache/0/94/0/underline_thickness = 0.0
-cache/0/94/0/scale = 1.0
-cache/0/95/0/ascent = 0.0
-cache/0/95/0/descent = 0.0
-cache/0/95/0/underline_position = 0.0
-cache/0/95/0/underline_thickness = 0.0
-cache/0/95/0/scale = 1.0
-cache/0/96/0/ascent = 0.0
-cache/0/96/0/descent = 0.0
-cache/0/96/0/underline_position = 0.0
-cache/0/96/0/underline_thickness = 0.0
-cache/0/96/0/scale = 1.0
-cache/0/97/0/ascent = 0.0
-cache/0/97/0/descent = 0.0
-cache/0/97/0/underline_position = 0.0
-cache/0/97/0/underline_thickness = 0.0
-cache/0/97/0/scale = 1.0
-cache/0/98/0/ascent = 0.0
-cache/0/98/0/descent = 0.0
-cache/0/98/0/underline_position = 0.0
-cache/0/98/0/underline_thickness = 0.0
-cache/0/98/0/scale = 1.0
-cache/0/99/0/ascent = 0.0
-cache/0/99/0/descent = 0.0
-cache/0/99/0/underline_position = 0.0
-cache/0/99/0/underline_thickness = 0.0
-cache/0/99/0/scale = 1.0
-cache/0/100/0/ascent = 0.0
-cache/0/100/0/descent = 0.0
-cache/0/100/0/underline_position = 0.0
-cache/0/100/0/underline_thickness = 0.0
-cache/0/100/0/scale = 1.0
-cache/0/101/0/ascent = 0.0
-cache/0/101/0/descent = 0.0
-cache/0/101/0/underline_position = 0.0
-cache/0/101/0/underline_thickness = 0.0
-cache/0/101/0/scale = 1.0
-cache/0/102/0/ascent = 0.0
-cache/0/102/0/descent = 0.0
-cache/0/102/0/underline_position = 0.0
-cache/0/102/0/underline_thickness = 0.0
-cache/0/102/0/scale = 1.0
-cache/0/103/0/ascent = 0.0
-cache/0/103/0/descent = 0.0
-cache/0/103/0/underline_position = 0.0
-cache/0/103/0/underline_thickness = 0.0
-cache/0/103/0/scale = 1.0
-cache/0/104/0/ascent = 0.0
-cache/0/104/0/descent = 0.0
-cache/0/104/0/underline_position = 0.0
-cache/0/104/0/underline_thickness = 0.0
-cache/0/104/0/scale = 1.0
-cache/0/105/0/ascent = 0.0
-cache/0/105/0/descent = 0.0
-cache/0/105/0/underline_position = 0.0
-cache/0/105/0/underline_thickness = 0.0
-cache/0/105/0/scale = 1.0
-cache/0/106/0/ascent = 0.0
-cache/0/106/0/descent = 0.0
-cache/0/106/0/underline_position = 0.0
-cache/0/106/0/underline_thickness = 0.0
-cache/0/106/0/scale = 1.0
-cache/0/107/0/ascent = 0.0
-cache/0/107/0/descent = 0.0
-cache/0/107/0/underline_position = 0.0
-cache/0/107/0/underline_thickness = 0.0
-cache/0/107/0/scale = 1.0
-cache/0/108/0/ascent = 0.0
-cache/0/108/0/descent = 0.0
-cache/0/108/0/underline_position = 0.0
-cache/0/108/0/underline_thickness = 0.0
-cache/0/108/0/scale = 1.0
-cache/0/109/0/ascent = 0.0
-cache/0/109/0/descent = 0.0
-cache/0/109/0/underline_position = 0.0
-cache/0/109/0/underline_thickness = 0.0
-cache/0/109/0/scale = 1.0
-cache/0/110/0/ascent = 0.0
-cache/0/110/0/descent = 0.0
-cache/0/110/0/underline_position = 0.0
-cache/0/110/0/underline_thickness = 0.0
-cache/0/110/0/scale = 1.0
-cache/0/111/0/ascent = 0.0
-cache/0/111/0/descent = 0.0
-cache/0/111/0/underline_position = 0.0
-cache/0/111/0/underline_thickness = 0.0
-cache/0/111/0/scale = 1.0
-cache/0/112/0/ascent = 0.0
-cache/0/112/0/descent = 0.0
-cache/0/112/0/underline_position = 0.0
-cache/0/112/0/underline_thickness = 0.0
-cache/0/112/0/scale = 1.0
-cache/0/113/0/ascent = 0.0
-cache/0/113/0/descent = 0.0
-cache/0/113/0/underline_position = 0.0
-cache/0/113/0/underline_thickness = 0.0
-cache/0/113/0/scale = 1.0
-cache/0/114/0/ascent = 0.0
-cache/0/114/0/descent = 0.0
-cache/0/114/0/underline_position = 0.0
-cache/0/114/0/underline_thickness = 0.0
-cache/0/114/0/scale = 1.0
-cache/0/115/0/ascent = 0.0
-cache/0/115/0/descent = 0.0
-cache/0/115/0/underline_position = 0.0
-cache/0/115/0/underline_thickness = 0.0
-cache/0/115/0/scale = 1.0
-cache/0/116/0/ascent = 0.0
-cache/0/116/0/descent = 0.0
-cache/0/116/0/underline_position = 0.0
-cache/0/116/0/underline_thickness = 0.0
-cache/0/116/0/scale = 1.0
-cache/0/117/0/ascent = 0.0
-cache/0/117/0/descent = 0.0
-cache/0/117/0/underline_position = 0.0
-cache/0/117/0/underline_thickness = 0.0
-cache/0/117/0/scale = 1.0
-cache/0/118/0/ascent = 0.0
-cache/0/118/0/descent = 0.0
-cache/0/118/0/underline_position = 0.0
-cache/0/118/0/underline_thickness = 0.0
-cache/0/118/0/scale = 1.0
-cache/0/119/0/ascent = 0.0
-cache/0/119/0/descent = 0.0
-cache/0/119/0/underline_position = 0.0
-cache/0/119/0/underline_thickness = 0.0
-cache/0/119/0/scale = 1.0
-cache/0/120/0/ascent = 0.0
-cache/0/120/0/descent = 0.0
-cache/0/120/0/underline_position = 0.0
-cache/0/120/0/underline_thickness = 0.0
-cache/0/120/0/scale = 1.0
-cache/0/121/0/ascent = 0.0
-cache/0/121/0/descent = 0.0
-cache/0/121/0/underline_position = 0.0
-cache/0/121/0/underline_thickness = 0.0
-cache/0/121/0/scale = 1.0
-cache/0/122/0/ascent = 0.0
-cache/0/122/0/descent = 0.0
-cache/0/122/0/underline_position = 0.0
-cache/0/122/0/underline_thickness = 0.0
-cache/0/122/0/scale = 1.0
-cache/0/123/0/ascent = 0.0
-cache/0/123/0/descent = 0.0
-cache/0/123/0/underline_position = 0.0
-cache/0/123/0/underline_thickness = 0.0
-cache/0/123/0/scale = 1.0
-cache/0/200/0/ascent = 0.0
-cache/0/200/0/descent = 0.0
-cache/0/200/0/underline_position = 0.0
-cache/0/200/0/underline_thickness = 0.0
-cache/0/200/0/scale = 1.0
-cache/0/15/0/ascent = 0.0
-cache/0/15/0/descent = 0.0
-cache/0/15/0/underline_position = 0.0
-cache/0/15/0/underline_thickness = 0.0
-cache/0/15/0/scale = 1.0
-cache/0/150/0/ascent = 0.0
-cache/0/150/0/descent = 0.0
-cache/0/150/0/underline_position = 0.0
-cache/0/150/0/underline_thickness = 0.0
-cache/0/150/0/scale = 1.0
-
-[sub_resource type="LabelSettings" id="LabelSettings_0xha3"]
-font = SubResource("FontFile_6li7e")
-font_size = 110
-font_color = Color(0.94509804, 0.16862746, 0.16862746, 1)
-outline_size = 12
-outline_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_21vx1"]
-font = SubResource("FontFile_6li7e")
-font_size = 110
-font_color = Color(0.94509804, 0.16862746, 0.16862746, 1)
-outline_size = 12
-outline_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_36cvf"]
-font = SubResource("FontFile_6li7e")
-font_size = 200
-font_color = Color(0.94509804, 0.16862746, 0.16862746, 1)
-outline_size = 15
-outline_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_h6p3x"]
-font = SubResource("FontFile_6li7e")
-font_size = 150
-font_color = Color(0.94509804, 0.16862746, 0.16862746, 1)
-outline_size = 12
-outline_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
-
-[sub_resource type="LabelSettings" id="LabelSettings_1o7dh"]
-font = SubResource("FontFile_6li7e")
-font_size = 65
+[sub_resource type="LabelSettings" id="LabelSettings_nbk5b"]
+font_size = 130
 font_color = Color(0.94509804, 0.16862746, 0.16862746, 1)
 outline_size = 12
 outline_color = Color(0.12955844, 0.12955847, 0.12955844, 1)
@@ -427,100 +81,100 @@ offset_bottom = 2589.0
 scale = Vector2(0.2, 0.2)
 texture_normal = ExtResource("3_onal2")
 
-[node name="P1Puntos" type="Label" parent="."]
-z_index = 1
-layout_mode = 0
-offset_left = 412.0
-offset_top = 240.0
-offset_right = 548.0
-offset_bottom = 387.0
-text = "0"
-label_settings = SubResource("LabelSettings_0xha3")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="P2Puntos" type="Label" parent="."]
-z_index = 1
-layout_mode = 0
-offset_left = 1372.0
-offset_top = 240.0
-offset_right = 1508.0
-offset_bottom = 356.0
-text = "0"
-label_settings = SubResource("LabelSettings_21vx1")
-horizontal_alignment = 1
-vertical_alignment = 1
-
 [node name="PuntosCoop" type="Label" parent="."]
 z_index = 1
 layout_mode = 0
 offset_left = 893.0
-offset_top = 269.0
+offset_top = 364.0
 offset_right = 1029.0
-offset_bottom = 536.0
+offset_bottom = 637.0
 text = "0"
-label_settings = SubResource("LabelSettings_36cvf")
+label_settings = SubResource("LabelSettings_nbk5b")
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PuntosCoopLabel" type="Label" parent="PuntosCoop"]
 z_index = 1
 layout_mode = 0
-offset_left = -219.0
-offset_top = -199.0
-offset_right = 357.0
-offset_bottom = 68.0
+offset_left = -260.0
+offset_top = -173.0
+offset_right = 427.0
+offset_bottom = 100.0
 text = "Muertes:"
-label_settings = SubResource("LabelSettings_h6p3x")
+label_settings = SubResource("LabelSettings_nbk5b")
 horizontal_alignment = 1
 vertical_alignment = 1
-
-[node name="Player1" type="Label" parent="."]
-z_index = 1
-layout_mode = 0
-offset_left = 340.0
-offset_top = 102.0
-offset_right = 623.0
-offset_bottom = 218.0
-text = "Jugador 1"
-label_settings = SubResource("LabelSettings_1o7dh")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Player2" type="Label" parent="."]
-z_index = 1
-layout_mode = 0
-offset_left = 1300.0
-offset_top = 102.0
-offset_right = 1583.0
-offset_bottom = 218.0
-text = "Jugador 2"
-label_settings = SubResource("LabelSettings_1o7dh")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="TrofeoP1" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(195, 240)
-scale = Vector2(1.1163793, 1.1163791)
-texture = ExtResource("4_tfgtp")
-
-[node name="TrofeoP2" type="Sprite2D" parent="."]
-visible = false
-position = Vector2(1725, 240)
-scale = Vector2(1.1163793, 1.1163791)
-texture = ExtResource("4_tfgtp")
 
 [node name="Auto_P1" type="AnimatedSprite2D" parent="."]
-position = Vector2(420, 620)
+position = Vector2(420, 731.00006)
 rotation = 1.5707964
 scale = Vector2(0.17850964, 0.17850962)
 sprite_frames = SubResource("SpriteFrames_36cvf")
 animation = &"1"
 
 [node name="Auto_P2" type="AnimatedSprite2D" parent="."]
-position = Vector2(1500, 620)
+position = Vector2(1500, 731)
 rotation = 4.712389
 scale = Vector2(0.17850964, 0.17850962)
 sprite_frames = SubResource("SpriteFrames_36cvf")
 animation = &"2"
+
+[node name="Player1" type="Label" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 101.0
+offset_top = 14.0
+offset_right = 832.0
+offset_bottom = 287.0
+text = "Jugador 1"
+label_settings = SubResource("LabelSettings_nbk5b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Player2" type="Label" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 1126.0
+offset_top = 14.0
+offset_right = 1857.0
+offset_bottom = 287.0
+text = "Jugador 2"
+label_settings = SubResource("LabelSettings_nbk5b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="P1Puntos" type="Label" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 114.0
+offset_top = 179.0
+offset_right = 845.0
+offset_bottom = 452.0
+text = "0"
+label_settings = SubResource("LabelSettings_nbk5b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="P2Puntos" type="Label" parent="."]
+z_index = 1
+layout_mode = 0
+offset_left = 1076.0
+offset_top = 179.0
+offset_right = 1807.0
+offset_bottom = 452.0
+text = "0"
+label_settings = SubResource("LabelSettings_nbk5b")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="TrofeoP1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(195, 403)
+scale = Vector2(1.1163793, 1.1163791)
+texture = ExtResource("4_tfgtp")
+
+[node name="TrofeoP2" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(1725, 403)
+scale = Vector2(1.1163793, 1.1163791)
+texture = ExtResource("4_tfgtp")
