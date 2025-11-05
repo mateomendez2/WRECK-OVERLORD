@@ -14,7 +14,7 @@ var BombaScene = preload("res://bomba/bomba.tscn")
 var bomba_x = 0
 var bomba_y = 0
 var cantidad_bombas = 3
-var selected_map = 3 # randi_range(1, 3)
+var selected_map = randi_range(1, 3)
 
 func _ready():
 	Global.p1_respawn_position = 200
