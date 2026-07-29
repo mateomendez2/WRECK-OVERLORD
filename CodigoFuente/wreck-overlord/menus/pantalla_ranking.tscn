@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://b73r55tdbbofu"]
+
+[ext_resource type="Script" uid="uid://d06wtqrrj7yvu" path="res://pantalla_ranking.gd" id="1_fp1lh"]
+[ext_resource type="Texture2D" uid="uid://d07tkdknu8qdm" path="res://asssets/Fondointerfazvsycoop.png" id="2_v6ukf"]
+[ext_resource type="Texture2D" uid="uid://b4wre1bh3cp4l" path="res://asssets/Botondeplay.png" id="3_v6ukf"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_og6ck"]
+font_size = 70
+font_color = Color(0, 0, 0, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 20
+shadow_color = Color(0.729, 0.729, 0.729, 1)
+
+[node name="pantalla_ranking" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_fp1lh")
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("2_v6ukf")
+stretch_mode = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 679.0
+offset_top = 341.0
+offset_right = 1297.0
+offset_bottom = 996.0
+
+[node name="Texto" type="Label" parent="."]
+layout_mode = 0
+offset_left = 459.0
+offset_top = 212.0
+offset_right = 1461.0
+offset_bottom = 306.0
+text = "TOP 10 MEJORES"
+label_settings = SubResource("LabelSettings_og6ck")
+horizontal_alignment = 1
+
+[node name="Botonplay" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 1365.0
+offset_top = 590.0
+offset_right = 3285.0
+offset_bottom = 2510.0
+scale = Vector2(0.2, 0.2)
+texture_normal = ExtResource("3_v6ukf")

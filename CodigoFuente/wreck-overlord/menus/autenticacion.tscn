@@ -1,0 +1,111 @@
+[gd_scene load_steps=5 format=3 uid="uid://7bkx6grxq8c4"]
+
+[ext_resource type="Script" uid="uid://bvppjqk440myu" path="res://menus/autenticacion.gd" id="1_kh87k"]
+[ext_resource type="Texture2D" uid="uid://d07tkdknu8qdm" path="res://asssets/Fondointerfazvsycoop.png" id="1_stknt"]
+[ext_resource type="Texture2D" uid="uid://b4wre1bh3cp4l" path="res://asssets/Botondeplay.png" id="3_t8w6h"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_kh87k"]
+font_size = 30
+font_color = Color(0, 0, 0, 1)
+
+[node name="Autenticacion" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_kh87k")
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("1_stknt")
+stretch_mode = 5
+
+[node name="LabelEstado" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 660.0
+offset_top = 227.0
+offset_right = 1260.0
+offset_bottom = 278.0
+text = "Not Loged In"
+label_settings = SubResource("LabelSettings_kh87k")
+horizontal_alignment = 1
+
+[node name="EmailLineEdit" type="LineEdit" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 660.0
+offset_top = 287.0
+offset_right = 1260.0
+offset_bottom = 357.0
+placeholder_text = "Email"
+
+[node name="PasswordLineEdit" type="LineEdit" parent="."]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 660.0
+offset_top = 367.0
+offset_right = 1260.0
+offset_bottom = 437.0
+placeholder_text = "Password"
+
+[node name="LogInButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 447.0
+offset_right = 1260.0
+offset_bottom = 517.0
+text = "Log In"
+
+[node name="SignUpButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 527.0
+offset_right = 1260.0
+offset_bottom = 597.0
+text = "Sign Up"
+
+[node name="GoogleButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 607.0
+offset_right = 1260.0
+offset_bottom = 677.0
+text = "Sign in with Google"
+
+[node name="GitHubButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 687.0
+offset_right = 1260.0
+offset_bottom = 757.0
+text = "Sign in with Git Hub"
+
+[node name="AnonymousButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 660.0
+offset_top = 767.0
+offset_right = 1260.0
+offset_bottom = 837.0
+text = "Login Anonymously"
+
+[node name="Botonplay" type="TextureButton" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 1367.0001
+offset_top = 444.0
+offset_right = 3287.0
+offset_bottom = 2364.0
+scale = Vector2(0.12, 0.12)
+texture_normal = ExtResource("3_t8w6h")
+
+[connection signal="pressed" from="LogInButton" to="." method="_on_log_in_button_pressed"]
+[connection signal="pressed" from="SignUpButton" to="." method="_on_sign_up_button_pressed"]
+[connection signal="pressed" from="GoogleButton" to="." method="_on_google_button_pressed"]
+[connection signal="pressed" from="GitHubButton" to="." method="_on_git_hub_button_pressed"]
+[connection signal="pressed" from="AnonymousButton" to="." method="_on_anonymous_button_pressed"]
+[connection signal="pressed" from="Botonplay" to="." method="_on_botonplay_pressed"]

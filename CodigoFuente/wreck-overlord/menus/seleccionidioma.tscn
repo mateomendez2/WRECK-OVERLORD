@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://2ml6p6tgy0ir"]
+
+[ext_resource type="Script" uid="uid://cecgwmy3d8yqs" path="res://menus/seleccion_idioma.gd" id="1_gn52q"]
+[ext_resource type="Texture2D" uid="uid://d07tkdknu8qdm" path="res://asssets/Fondointerfazvsycoop.png" id="2_14nlr"]
+[ext_resource type="Texture2D" uid="uid://bmb2q5ic7t1s2" path="res://asssets/banderas/bandera_Argentina.jpg" id="3_ej8m4"]
+[ext_resource type="Texture2D" uid="uid://b7ledqmydcoba" path="res://asssets/banderas/bandera_USA.jpg" id="4_ljdyj"]
+[ext_resource type="Texture2D" uid="uid://g6pfkrtktrxf" path="res://asssets/banderas/bandera_Brasil.png" id="5_ja540"]
+[ext_resource type="Texture2D" uid="uid://cihuye08p0jq1" path="res://asssets/Flecha.png" id="6_3jeak"]
+
+[node name="Seleccionidioma" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_gn52q")
+
+[node name="Fondo" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("2_14nlr")
+stretch_mode = 5
+
+[node name="BanderaArgentina" type="Sprite2D" parent="."]
+position = Vector2(435, 580)
+scale = Vector2(0.8542857, 0.8571429)
+texture = ExtResource("3_ej8m4")
+
+[node name="BanderaUsa" type="Sprite2D" parent="."]
+position = Vector2(960, 580)
+scale = Vector2(0.46679685, 0.5272409)
+texture = ExtResource("4_ljdyj")
+
+[node name="BanderaBrasil" type="Sprite2D" parent="."]
+position = Vector2(1485, 580)
+scale = Vector2(0.49791652, 0.4464287)
+texture = ExtResource("5_ja540")
+
+[node name="Flecha" type="Sprite2D" parent="."]
+position = Vector2(435, 313)
+rotation = -1.5707964
+scale = Vector2(0.13, 0.13)
+texture = ExtResource("6_3jeak")
+
+[node name="HTTPRequest" type="HTTPRequest" parent="."]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.6
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
